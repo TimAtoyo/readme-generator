@@ -83,32 +83,32 @@ const questions = [
     // Description
     {
         type: "input",
-        name: "why input",
+        name: "motivation input",
         message: "Why was your motivation?",
         default: "Na",
       },
       {
         type: "input",
-        name: "why input",
-        message: "Why did you build this project??",
+        name: "build input",
+        message: "Why did you build this project?",
         default: "Na",
       },
       {
         type: "input",
-        name: "what input",
+        name: "problem input",
         message: "What problem does it solve?",
         default: "Na",
       },
       {
         type: "input",
-        name: "What input",
+        name: "learning input",
         message: "What did you learn?",
         default: "Na",
       },
     //   Instalation
       {
         type: "input",
-        name: "What input",
+        name: "instalSteps input",
         message: "What are the steps required to install your project? /n Provide a step-by-step description of how to get the development environment running.",
         default: "Na",
       },
@@ -120,20 +120,48 @@ const questions = [
       },
       {
         type: "list",
-        name: "Coding language input",
+        name: "licenses input",
         message: "Whats your go to language?",
         default: "MIT License",
         choices: ["Apache License 2.0", "GNU GPLv3 License", "MIT License", "ISC License"],
       },
       {
-        type: "list",
-        name: "Coding language input",
+        type: "checkbox",
+        name: "languages input",
         message: "Whats languages are used on your project?",
-        default: "I like to code!",
+        default: "JavaScript",
         choices: ["HTML", "JavaScript", "C", "Python", "Other"],
       },
-     
 ];
+
+
+inquirer
+  .prompt(questions)
+  .then((answers) => {
+    // Use user feedback for... whatever!!
+    const motivation = answers["motivation input"]
+    const build = answers["build input"];
+    const problem = answers["problem input"];
+    const learning = answers["learning input"];
+    const instalSteps = answers["instalSteps input"];
+    const instructions = answers["instructions input"];
+    const licenses = answers["licenses input"];
+    const languages = answers["languages input"];
+
+
+
+    writeFile("index.html", result, (err) =>
+      // TODO: Describe how this ternary operator works
+      err ? console.error(err) : console.log("Commit logged!")
+    );
+  })
+  .catch((error) => {
+    if (error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else went wrong
+    }
+  });
 
 // function to write README file
 function writeToFile(fileName, data) {
