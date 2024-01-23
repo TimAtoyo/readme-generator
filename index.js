@@ -8,7 +8,7 @@ const fileName = './README.md';
 
 // function to write README file
 function writeToFile(fileName, data) {
-  appendFile(fileName, generateMarkdown(data), (err) =>
+  writeFile(fileName, generateMarkdown(data), (err) =>
   // TODO: Describe how this ternary operator works
   err ? console.error(err) : console.log("Commit logged!"), console.log(generateMarkdown(data))
 );
