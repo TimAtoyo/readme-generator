@@ -1,12 +1,12 @@
 
-  # Your-Project-Title
+  # Ecom MVC With Authentication
       
   ## Description
       
-  Na
-  Na
-  Na
-  Na
+  To learn more about c# MVC, MSSQL, Docker Containers Authentiction and  Payment gateways in particular PayPall, I also wanted to see how I can use Tailwind to polish the app to a proffetional level 
+  To get a better understanding of the Arcitecture of a ecomerse site using .Net MVC
+  It Solves the problem if purchacing a movie, provides an account for Admins to manage Movies and for Users to track their purchases
+  Implementing Authentication, planning Models to have the relationship thats needed for the app!
       
   ## Table of Contents
       
@@ -19,7 +19,7 @@
       
   ## Installation
       
-  Na
+  	Na
       
       
   ## Usage
@@ -70,5 +70,5 @@
   If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
       
   ## Tests
-      npm test
+      dotnet run
 
